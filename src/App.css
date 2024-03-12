@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+*{
+  margin: 0;
+  overflow-x: hidden;
+  
+}
+body {
+  background-color:rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  width:100%;
+}
+.log-in-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.log-in-page img {
+  width: 300px;
+  height: auto;
+}
+
+.log-in-form{
+  gap: 11px;
+  width: 340px;
+  height: 270px;
+  margin-bottom: 50px;
+}
+.submit-button{
+  width: 90px;
+  height: 40px;
+  background-color: rgb(243, 243, 243);
+  border:none;
+  font-family: Georgia;
+  font-weight: 500;
+}
+.submit-button:hover{
+  background-color: gainsboro;
+  cursor: pointer;
+}
+.submit-button:active{
+  cursor: not-allowed;
+}
+input{
+  border-top:none;
+  border-left: none;
+  border-right:none;
+  margin-bottom: 25px;
+  width: 300px;
+  height: 40px;
+}
+
+input, label{
+  display: block;
+}
+footer {
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 160px;
+  background-color:#2b3990;
+  font-family: Roboto;
+}
+.site-logo img{
+  width: 100px;
+  height: auto;
+}
+.header-top{
+  background-color:#2b3990;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-right: 55px;
+  height: fit-content;
+}
+.profile{
+  width: 175px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+.profile button{
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: white ;
+  border-radius: 50%; 
+}
+.profile button:hover{
+  cursor: pointer;
+}
+.sign-out-profile{
+  background-color: aliceblue;
+  width: 40px;
+}
+.sign-out{
+  width: 100%;
+}
+nav{
+  display: flex;
+  background-color:#3b3b3a;
+  color: white;
+  gap: 40px;
+  height: 50px;
+  align-items: center;
+  padding-left: 40px;
+}
+.nav-links{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: Georgia;
+}
+.nav-links:hover{
+  text-decoration: underline;
+}
+.home {
+  width: 96%;
+  height: 600px;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.posts{
+  width: 75%;
+  height: 99%;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.post{
+  width: 99%;
+  height: 100px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 6px;
+  background-color: #d1d1e023;;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.post:hover{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.post h2 a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #2b3990;
+  line-height: 3px;
+}
+.post p {
+  color: grey;
+  font-size: 11px;
+  
+}
+.post h2 a:hover{
+color: rgb(112, 104, 104);
+text-decoration: underline;
+}
+.author-date{
+  color: green;
+  display: flex;
+  justify-content: space-between;
+}
+.blog{
+  width: 25%;
+  height: 99%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.blog-post:hover{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.blog-post{
+  background-color: #2b3990;
+  width: 95%;
+  height: 100px;
+  border: 1px solid black;
+  color: aliceblue;
+  border-radius: 6px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+.blog-post h3{
+  font-size: 22px;
+}
+.blog-author{
+  color: rgb(249, 253, 0);
+  display: flex;
+  flex-direction: column;
+  gap:3px;
+}
