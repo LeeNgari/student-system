@@ -4,6 +4,7 @@ import React from 'react';
 import LogIn from './pages/LogIn';
 import Header from './components/header'
 import Home from "./pages/home"
+import Clubs from "./pages/clubs"
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"; 
@@ -41,7 +42,7 @@ function App() {
       id:doc.id
     }))
     setInfo(posts)
-    console.log(info)
+    
 
     const querySnapshottwo = await getDocs(collection(db, "blog"));
     const poststwo = querySnapshottwo.docs.map(doc => ({
@@ -51,7 +52,7 @@ function App() {
     setBlog(poststwo)
 
   }
-  console.log(info[4])
+  
   return (
     <>
        <BrowserRouter>
@@ -66,10 +67,13 @@ function App() {
             
            />} />
             
-          <Route path="/home" element={<Home  
+          <Route path='home' element={<Home  
 
              posts={info}
              blogs = {blog}
+          />} />
+          <Route path="/clubs" element={<Clubs 
+            db = {db}
           />} />
           {/* 
           <Route path="/clubs" element={<Clubs />} />
