@@ -4,14 +4,13 @@ export default function clb({image ,tags,about ,name}){
 
     const styles = {  
         backgroundImage:`url(${image})`,
-        backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }
       
     return (
        
-        <div className="club" style={styles}>
+        <div className="club" >
         <button className="clb" >{name}</button>
                 </div>
         

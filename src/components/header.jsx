@@ -3,10 +3,11 @@ import { Link, useLocation } from "react-router-dom"
 import {  signOut } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 
+
 export default function header({auth}){
 
-    const [showButton, setShowButton] = React.useState(true);
-
+    const [showButton, setShowButton] = React.useState(false);
+    const navigate = useNavigate();
     const toggleButton = () => {
       setShowButton(!showButton);
     };
@@ -16,10 +17,12 @@ export default function header({auth}){
         return null
     }
     const handleLogOut = () =>{
+     
         signOut(auth).then(() => {
-            Navigate("/")
+            navigate("/")
           }).catch((error) => {
             console.log("sign out not successful")
+            console.log(error)
           });
     }
    
