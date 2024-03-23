@@ -5,11 +5,17 @@ import LogIn from './pages/LogIn';
 import Header from './components/header'
 import Home from "./pages/home"
 import Clubs from "./pages/clubs"
+import ClubDetail from "./pages/club-detail"
+import ClubInfo from './components/ClubInfo';
+import ClubPosts from './components/ClubPosts';
+import ClubChat from  './components/ClubChat'
+import Post from './pages/Post';
+import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"; 
-import { getDatabase, ref, query, limitToLast } from "firebase/database";
-import {  signOut } from "firebase/auth";
+
 
 import { collection, getDocs } from "firebase/firestore";
 
@@ -50,7 +56,6 @@ function App() {
       id:doc.id
     }))
     setBlog(poststwo)
-
   }
   
   return (
@@ -72,9 +77,18 @@ function App() {
              posts={info}
              blogs = {blog}
           />} />
+          <Route path="home/:id" element={<Post  db = {db}/>} />
           <Route path="/clubs" element={<Clubs 
             db = {db}
           />} />
+          <Route path="clubs/:id" element={<ClubDetail  db = {db}/>}>
+
+              <Route index element={<ClubInfo />} />
+              <Route path="posts" element={<ClubPosts  db = {db}/>} />
+              <Route path="chat" element={<ClubChat />} />
+          </Route>
+          <Route path="/blog" element={<Blog db = {db}/>} />
+          <Route path="blog/:id" element={<BlogDetail  db = {db}/>}></Route>
           {/* 
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/sports" element={<Sports />} />

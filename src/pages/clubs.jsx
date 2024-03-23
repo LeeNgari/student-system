@@ -15,7 +15,6 @@ export default function clubs({db}){
           id:doc.id
         }))
         setClubs(poststwo)
-        console.log(poststwo)
       }
     return(
       <div className="clubs">
