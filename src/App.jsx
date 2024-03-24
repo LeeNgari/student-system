@@ -14,6 +14,7 @@ import Sports from './pages/sports'
 import SportsDetail from "./pages/sport-detail"
 import SportsInfo from './components/SportInfo';
 import SportsPosts from './components/SportPost';
+import IndiSportPost from './components/indi-sport-post'
 import SportsChat from  './components/SportChat'
 import Post from './pages/Post';
 import Blog from './pages/Blog';
@@ -43,6 +44,7 @@ function App() {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
   const db = getFirestore(app)
+  
 
   React.useEffect(()=>{ asyncCall()} ,[])
 
@@ -92,7 +94,7 @@ function App() {
               <Route index element={<ClubInfo />} />
               <Route path="posts" element={<ClubPosts  db = {db}/>} />
               <Route path="posts/:id" element={<IndiClubPost  db = {db}/>} />
-              <Route path="chat" element={<ClubChat />} />
+              <Route path="chat" element={<ClubChat db = {db} auth = {auth} />} />
           </Route>
           <Route path="/blog" element={<Blog db = {db}/>} />
           <Route path="blog/:id" element={<BlogDetail  db = {db}/>}></Route>
@@ -103,6 +105,7 @@ function App() {
 
               <Route index element={<SportsInfo />} />
               <Route path="posts" element={<SportsPosts  db = {db}/>} />
+              <Route path="posts/:id" element={<IndiSportPost  db = {db}/>} />
               <Route path="chat" element={<SportsChat />} />
           </Route>
           {/* 

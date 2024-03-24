@@ -1,8 +1,8 @@
-import React from "react";
+import react from "react"
 
-export default function chat(){
+export default function ClubChat(){
 
     return(
-        <h1>Chat</h1>
+        <h1>ldd</h1>
     )
 }
