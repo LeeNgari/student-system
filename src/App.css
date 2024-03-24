@@ -435,3 +435,43 @@ text-decoration: underline;
 .indi-club-post:hover{
   text-decoration: underline;
 }
+.leaders{
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+}
+.school{
+  width: 80%;
+  min-height: 250px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.leader{
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+.school-title{
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.school-leaders{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.school-leaders h6{
+  color: green;
+}
+.school-leaders img{
+  border-radius: 5px;
+}

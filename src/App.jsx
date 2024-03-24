@@ -19,6 +19,7 @@ import SportsChat from  './components/SportChat'
 import Post from './pages/Post';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
+import Leader from './pages/leaders';
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"; 
@@ -108,12 +109,8 @@ function App() {
               <Route path="posts/:id" element={<IndiSportPost  db = {db}/>} />
               <Route path="chat" element={<SportsChat />} />
           </Route>
-          {/* 
-          <Route path="/clubs" element={<Clubs />} />
-          <Route path="/sports" element={<Sports />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/leaders" element={<Leaders />} />
-            */} 
+          <Route path="/leaders" element={<Leader />} />
+           
         </Routes>
         <footer><h6>© 1997-2024 Blackboard Inc. All Rights Reserved.</h6></footer>
           
