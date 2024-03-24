@@ -2,8 +2,9 @@ import React from "react";
 import { useOutletContext, useParams } from "react-router-dom";
 
 export default function ClubInfo(){
-        const context = useOutletContext(); 
-       
+        const context = useOutletContext();
+        const lists = context['members']  
+        
     return(
         <div className="club-info">
             

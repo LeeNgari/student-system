@@ -358,10 +358,16 @@ li{
   min-height: 500px;
   background-color: aliceblue;
 }
-.post-titl{
+.post-title2{
+color: aliceblue;
 font-family: Roboto;
 text-decoration: underline;
 }
+.post-title{
+  color: rgb(0, 0, 0);
+  font-family: Roboto;
+  text-decoration: underline;
+  }
 .post-author{
   color: green;
   text-decoration: underline;
@@ -399,4 +405,33 @@ text-decoration: underline;
 }
 .blg-author{
   color: green;
+}
+.events{
+  min-height: 600px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+.indi-club-post{
+  width: 76%;
+  height: 100px;
+  padding: 15px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.indi-club-post-author-date{
+  color: green;
+}
+.indi-club-post-title{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.indi-club-post:hover{
+  text-decoration: underline;
 }

@@ -8,7 +8,7 @@ export default function blog({title ,value}){
             <Link
             to={`blog/${title}`}
             key={title}
-            className="post-title"
+            className="post-title2"
         > <h2>{title}</h2></Link>
             <div className="blog-author">
                 <h5>{value.author}</h5>

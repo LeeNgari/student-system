@@ -45,7 +45,7 @@ export default function header({auth}){
           <nav>
             <Link className="nav-links"  to="/home">Home</Link>
             <Link className="nav-links"  to="/clubs">Clubs</Link>
-            <Link className="nav-links"  to="/sports>">Sports</Link>
+            <Link className="nav-links"  to="/sports">Sports</Link>
             <Link className="nav-links"  to="/blog">Blog</Link>
             <Link className="nav-links"  to="/leader>s">Leaders</Link>
           </nav>

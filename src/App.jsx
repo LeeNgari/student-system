@@ -8,7 +8,13 @@ import Clubs from "./pages/clubs"
 import ClubDetail from "./pages/club-detail"
 import ClubInfo from './components/ClubInfo';
 import ClubPosts from './components/ClubPosts';
+import IndiClubPost from './pages/IndiClubPost';
 import ClubChat from  './components/ClubChat'
+import Sports from './pages/sports'
+import SportsDetail from "./pages/sport-detail"
+import SportsInfo from './components/SportInfo';
+import SportsPosts from './components/SportPost';
+import SportsChat from  './components/SportChat'
 import Post from './pages/Post';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
@@ -85,10 +91,20 @@ function App() {
 
               <Route index element={<ClubInfo />} />
               <Route path="posts" element={<ClubPosts  db = {db}/>} />
+              <Route path="posts/:id" element={<IndiClubPost  db = {db}/>} />
               <Route path="chat" element={<ClubChat />} />
           </Route>
           <Route path="/blog" element={<Blog db = {db}/>} />
           <Route path="blog/:id" element={<BlogDetail  db = {db}/>}></Route>
+          <Route path="/sports" element={<Sports 
+            db = {db}
+          />} />
+          <Route path="sports/:id" element={<SportsDetail  db = {db}/>}>
+
+              <Route index element={<SportsInfo />} />
+              <Route path="posts" element={<SportsPosts  db = {db}/>} />
+              <Route path="chat" element={<SportsChat />} />
+          </Route>
           {/* 
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/sports" element={<Sports />} />

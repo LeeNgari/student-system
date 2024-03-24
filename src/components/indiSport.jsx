@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
-export default function clb({image ,tags,about ,name}){
+export default function clb({about ,name}){
 
       
     return (
